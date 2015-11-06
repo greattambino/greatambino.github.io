@@ -1,1 +1,149 @@
-Hello World
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Marc Tambara</title>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900,900italic,300italic|PT+Mono|Merriweather' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+  	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <link rel="shortcut icon" type="image/png" href="./images/mt.png"/>
+    <script src="./js/jquery-1.11.3.js"></script>
+    <script src="./js/navigation.js"></script>
+  </head>
+
+  <body>
+    <header class="nav-bar">
+      <nav class="group nav-menu">
+        <ul class="nav-list group">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="intro" class="group">
+      <h1>Hello, I'm Marc Tambara</h1>
+      <h3>I'm a web developer</h3>
+    </section>
+    <section id="about" class="group">
+      <h1>About Me</h1>
+      <p>
+        I’m a passionate software developer with the innovative and creative
+        mindset of an entrepreneur. I have experience building dynamic web
+        applications in JavaScript, Ruby on Rails, and HTML/CSS.
+      </p>
+      <p>
+        I love the battle of  developing an idea into existence, and forging
+        the bridge between conceptualization and a tangible, impactful product.
+        Programming has been my outlet for problem-solving and creative expression.
+      </p>
+    </section>
+    <section id="skills" class="group">
+      <h1>Skills and Technologies</h1>
+      <ul class="skills-list group">
+        <li><img src="./images/skills-javascript.png"><h3>JavaScript</h3></li>
+        <li><img src="./images/skills-react.png"><h3>React</h3></li>
+        <li><img src="./images/skills-ruby.png"><h3>Ruby</h3></li>
+        <li><img src="./images/skills-rails.png"><h3>Rails</h3></li>
+        <li><img src="./images/skills-git.png"><h3>Git</h3></li>
+      </ul>
+      <ul class="skills-list group">
+        <li><img src="./images/skills-jquery.png"><h3>jQuery</h3></li>
+        <li><img src="./images/skills-postgresql.png"><h3>PostgreSQL</h3></li>
+        <li><img src="./images/skills-HTML.png"><h3>HTML5</h3></li>
+        <li><img src="./images/skills-css.png"><h3>CSS3</h3></li>
+        <li><img src="./images/skills-SQL.png"><h3>SQL</h3></li>
+      </ul>
+    </section>
+    <section id="projects" class="group">
+      <h1>Projects</h1>
+      <ul class="projects-list">
+        <li class="project group yumblr">
+          <figure><img src="./images/yumblr.png">
+            <div class="project-links">
+              <a href="http://www.Yumblr.io">Live</a>
+              <a href="http://www.github.com/greattambino/yumblr">Github</a>
+            </div>
+          </figure>
+          <div class="project-desc group">
+            <h2>Yumblr</h2>
+            <h3>Food discovery app inspired by Yelp and StumbleUpon’s functionality</h3>
+            <ul>
+              <li>- Single-page React app built on a RESTful Rails architecture</li>
+              <li>- Enables dynamic location-based search utilizing Google Maps
+                    API on the front-end and the haversine formula on the back end
+                    to assist in calculating and filtering by distance</li>
+              <li>- Custom authentication using BCrypt overrides User#password=
+                    method to store secret hash instead of plain text</li>
+            </ul>
+          </div>
+        </li>
+        <li class="project group pokemon">
+          <figure><img src="./images/pokemon.png">
+            <div class="project-links">
+              <a href="http://greattambino.github.io/pokemon">Play</a>
+              <a href="http://www.github.com/greattambino/pokemon">Github</a>
+            </div>
+          </figure>
+
+            <div class="project-desc group">
+              <h2>Snake-Em-All</h2>
+              <h3>A browser-friendly version of the classic game Snake with a Pokemon twist</h3>
+              <ul>
+                <li>- Compete against AI functionality that utilizes the Manhattan distance
+                      heuristic for calculating the minimum cost and optimal path to a destination
+                      coordinate</li>
+                <li>- Javascript back end with jQuery, HTML and CSS front end</li>
+                <li>- Life cell effects and snake head are drawn with CSS</li>
+              </ul>
+            </div>
+          </li>
+
+        <li class="project group active-record">
+          <figure><img src="./images/coming-soon.jpg">
+            <div class="project-links">
+              <a href="http://www.github.com/greattambino/active-record-lite">Github</a>
+            </div>
+          </figure>
+          <div class="project-desc group">
+            <h2>Active ORM</h2>
+            <h3>Object-Relational Mapping framework inspired by ActiveRecord</h3>
+            <ul>
+              <li>- Utilizes meta programming to bridge the gap between Ruby and SQL</li>
+              <li>- Implements the DBConnection class to execute custom-built SQL
+                    queries and has_many and has_through associations</li>
+              <li>- Includes RSpecs to validate the functionality of ActiveRecord methods</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section id="contact" class="group">
+      <h1>Contact Me</h1>
+      <ul class="contact-list group">
+        <li><a href="http://www.github.com/greattambino"><i class="icon-github"></i></a></li>
+        <li><a href="mailto:marctambara@gmail.com"><i class="icon-mail"></i></a></li>
+        <li><a href="http://www.linkedin.com/in/marctambara"><i class="icon-linkedin"></i></a></li>
+      </ul>
+    </section>
+  </body>
+  <script>
+    $(function() {
+      new Navigation.NavBar($(".nav-bar"));
+      var target = $('#about').offset().top;
+
+      var interval = setInterval(function() {
+        if ($(window).scrollTop() >= target) {
+          $('.nav-bar').addClass("opaque");
+        } else {
+          $('.nav-bar').removeClass("opaque");
+        }
+      }, 100);
+    })
+
+  </script>
+
+
+</html>
