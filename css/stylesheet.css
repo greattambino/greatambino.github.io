@@ -41,6 +41,7 @@ section {
 section > h1 {
   font-size: 50px;
   font-family: 'Merriweather';
+  /*font-family: 'Open Sans', sans-serif;*/
   padding-bottom: 20px;
 }
 
@@ -111,6 +112,7 @@ section > h1 {
   position: absolute;
   color: #fff;
   font-family: 'Merriweather';
+  /*font-family: 'Open Sans', sans-serif;*/
   text-shadow: 2px 0px 0px #000;
 }
 
@@ -139,7 +141,8 @@ section#about {
 section#about p {
   width: 655px;
   margin: auto;
-  font-family: 'Lato';
+  /*font-family: 'Lato';*/
+  font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   text-align: justify;
   margin-bottom: 20px;
@@ -221,9 +224,15 @@ section#projects {
 .project-desc {
   padding: 0px 20px;
   width: 700px;
-  position: relative;
   top: 25px;
 }
+
+.project-desc-div {
+  padding: 0px 20px;
+  width: 700px;
+  top: 25px;
+}
+
 .project-desc > ul {
   padding: 20px;
   text-align: left;
@@ -238,6 +247,7 @@ section#projects {
 
 .project h3 {
   font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
   font-style: italic;
   text-align: left;
 }
@@ -312,4 +322,5 @@ section#contact i:hover{
   padding: 20px;
   font-size: 24px;
   font-family: 'Merriweather';
+  /*font-family: 'Open Sans', sans-serif;*/
 }
