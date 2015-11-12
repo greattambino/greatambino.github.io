@@ -239,6 +239,15 @@ section#projects {
   font-size: 16px;
 }
 
+.project-desc > ul > li > a {
+  color: #00FBFF;
+  text-decoration: underline;
+}
+
+.project-desc > ul > li > a:hover {
+  color: cornflowerblue;
+}
+
 .project h2 {
   font-size: 30px;
   font-weight: 300;
